@@ -1,0 +1,13 @@
+.centered{
+	text-align: center;
+}
+
+.img-avatar{
+	width: 200px;
+	height: 200px;
+}
+
+.dashboard-main-div{
+	margin-left: 10%;
+	margin-right: 10%;
+}

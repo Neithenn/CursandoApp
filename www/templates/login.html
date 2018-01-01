@@ -1,0 +1,79 @@
+
+<md-content>
+<div ng-controller="login_ctrl">
+
+        
+
+
+  <md-toolbar class="error-toolbar" ng-if="error.email_other_method">
+    <div class="md-toolbar-tools">
+      <p class="error-text">El e-mail ya fue utilizado con otro método de acceso.</p>
+    </div>
+  </md-toolbar>
+
+  <md-toolbar class="error-toolbar aling-items" ng-if="error.wrong_user">
+    <div class="md-toolbar-tools">
+      <p class="error-text">E-mail o contraseña inválidos.</p>
+    </div>
+  </md-toolbar>   
+
+  <md-toolbar class="error-toolbar" ng-if="error.unexpected_error">
+    <div class="md-toolbar-tools">
+      <p class="error-text">Ha ocurrido algo que no pudimos resolver. Vuelve a intentar luego o con intenta con otra cuenta.</p>
+    </div>
+  </md-toolbar>     
+
+      <p>{{dataUser}}</p>
+      <p>{{iscordova}}</p>
+<div class="login-div">
+  <form name="loginform" novalidate ng-submit="LoginPassword(email, password)">
+    <div layout="row">
+      <div flex="10">
+        <i class="fas fa-envelope fa-2x icon-input"></i>
+      </div>
+      <div flex>
+       <md-input-container class="md-block input-size">
+        <label>Email</label>
+        <input type="email" name="useremail" ng-model="email" required md-no-asterisk ></input>
+        <div ng-messages="loginform.useremail.$error">
+          <p ng-message="required">¡Debes ingresar tu e-mail!</p>
+          <p ng-message="email">Ingresa un e-mail correcto.</p>
+        </div>
+       </md-input-container>
+      </div>
+    </div>
+
+
+    <div layout="row">
+      <div flex="10">
+         <i class="fas fa-key fa-2x icon-input"></i>
+      </div>
+      <div flex>
+         <md-input-container class="md-block input-size">
+          <label>Contraseña</label>
+          <input type="password" ng-model="password" name="userpassword" required  md-no-asterisk minlength="6"></input>
+          <div ng-messages="loginform.userpassword.$error">
+            <div ng-message="required">¡Debes ingresar una contraseña!</div>
+            <div ng-message="minlength">Debe tener al menos 6 caracteres.</div>
+          </div>
+         </md-input-container>
+      </div>
+    </div>
+ 
+        <md-button type="submit" class="md-raised md-primary">ENTRAR</md-button>
+    
+  </form>
+    
+<div class="centered">
+   <div ng-include="'templates/_facebook_button.html'"></div>
+
+  <div class="centered">
+    <a class="login-questions" ng-click="resetPassword()"><strong>¿Olvidaste tu contraseña?</strong></a>
+    <a class="login-questions" ng-click="signin()"><strong>¿No tienes cuenta?</strong></a>
+    <!--<md-button class="md-accent" ng-click="resetPassword()">¿Olvidaste tu contraseña?</md-button>
+    <md-button class="md-accent" ng-click="signin()">¿No tienes cuenta?</md-button>-->
+  </div>
+</div>
+</div>
+</div>
+</md-content>

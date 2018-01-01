@@ -1,0 +1,43 @@
+{
+  "name": "com.cursandoApp.android",
+  "displayName": "CursandoApp",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-android": "^6.3.0",
+    "cordova-browser": "^5.0.2",
+    "cordova-plugin-browsersync": "^1.1.0",
+    "cordova-plugin-camera": "^3.0.0",
+    "cordova-plugin-facebook4": "^1.9.1",
+    "cordova-plugin-fcm": "^2.1.2",
+    "cordova-plugin-inappbrowser": "^1.7.2",
+    "cordova-plugin-splashscreen": "^5.0.1",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-universal-links-plugin": "^1.2.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-universal-links-plugin": {},
+      "cordova-plugin-fcm": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "332723973797774",
+        "APP_NAME": "Cursando"
+      },
+      "cordova-plugin-browsersync": {},
+      "cordova-plugin-splashscreen": {}
+    },
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  }
+}

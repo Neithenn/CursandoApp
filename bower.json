@@ -1,0 +1,28 @@
+{
+  "name": "cursandoApp",
+  "description": "App to everyone has something to do",
+  "main": "app.js",
+  "authors": [
+    "Ezequiel Buceta"
+  ],
+  "license": "Copyright",
+  "keywords": [
+    "ame"
+  ],
+  "homepage": "www.cursando.com",
+  "private": true,
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ngstorage": "^0.3.11",
+    "angular-socket-io": "^0.7.0",
+    "socket.io-client": "sio-client#^1.4.8",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.6"
+  }
+}

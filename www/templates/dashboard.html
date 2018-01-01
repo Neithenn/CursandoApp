@@ -1,0 +1,25 @@
+<div ng-include="'templates/navbar/_navbar.html'"></div>
+
+<md-content>
+	<div ng-controller="dashboard_ctrl" class="dashboard-main-div">
+	
+		<h1>DASHBOARD</h1>
+		<i class="fas fa-user"></i>
+		<i class="fas fa-user"></i>
+		
+		<p>nombre: {{user.nombre}}</p>
+		<p>uid: {{user.uid}}</p>
+		<p>email: {{user.email}}</p>
+		<p>photo: {{user.photo}}</p>
+		<p>imagen: {{userAvatar}}</p>
+			<md-button class="md-raised md-primary" ng-click="getPicturefromGallery()">Buscar Imagen</md-button>
+			<md-button class="md-raised md-primary" ng-click="goToChat()">Chat Room</md-button>
+			<md-button class="md-raised md-primary" ng-click="startCheckout()">Pagar</md-button>
+			<md-button class="md-raised md-primary" ng-click="logout()">Logout</md-button>
+
+		
+		<div class="centered">
+			<img src="{{userAvatar}}" alt="imagen avatar" class="img-avatar"></img>
+		</div>
+	</div>
+</md-content>
